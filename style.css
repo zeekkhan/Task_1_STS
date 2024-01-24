@@ -1,0 +1,145 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+    background-image: url('assets/pexels-madison-inouye-1831234.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+h1{
+    margin-left: 20px;
+}
+/* #home{
+    display: flex;
+} */
+.right{
+    margin-top: -100px;
+    float: right;
+}
+.left{
+    float: left ;
+}
+header, footer {
+    color: black;
+    background-color: transparent;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+header{
+    position: fixed;
+    text-align: left;
+}
+nav {
+    margin-top: -70px;
+    background-color: transparent;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    color: black;
+    position: fixed;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    
+}
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+ul li a{
+    color: black;
+    text-decoration: none;
+}
+ul li a:hover {
+  box-shadow: 3px 6px 33px 8px rgb(214, 140, 164);
+    border: 1px solid rgba(214, 140, 164, 0.7);
+    border-radius: 4px;
+    color: black;
+  }
+
+section {
+    text-align: center;
+    margin: 40px;
+    padding-top: 140px;
+    width: 80%;
+    color: black;
+}
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    color: black;
+}
+.product-card {
+    border-radius: 4px;
+    border: 1px solid white;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+.product-card:hover {
+    border-radius: 4px;
+    border: 1px solid black;
+    transform: scale(1.05);
+}
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.product-card button{
+    cursor: pointer;
+    border-radius: 6px;
+    background: lightblue;
+}
+
+@media (max-width: 600px) {
+    body {
+        align-items: flex-start;
+    }
+    section {
+        width: 100%;
+        padding: 0 10px;
+    }
+    nav ul li {
+        display: block;
+    }
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+    /* #home{
+        display: flex;
+    }
+    .right{
+        margin-top: 300px;
+        float: right;
+    }
+    .left{
+        float: inline-end ;
+    } */
+}
+#home {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.left, .right {
+    flex: 1;
+}
+@media (max-width: 600px) {
+    #home {
+        flex-direction: column;
+    }
+    .right {
+        order: -1;
+    }
+}
+.burger {
+    display: none;
+}
